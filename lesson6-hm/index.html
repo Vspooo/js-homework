@@ -60,7 +60,7 @@
 
     // let nums = [10,8,-7,55,987,-1011,0,1050,0] ;
     //
-    // let map = nums.map(num => JSON.stringify(num))
+    // let map = nums.map(num => num + '')
     // console.log(map);
 
 
@@ -70,12 +70,16 @@
     // sortNums(nums,'ascending') // [3,11,21]
     // sortNums(nums,'descending') // [21,11,3]
 
-    // let nums = [11,21,3];
-    // let sortNums = (array) => array.sort((num1,num2)=> num1 - num2);
-    // console.log(sortNums(nums));
-    //
-    // let sortNums = (array) => array.sort((num1,num2) => num2 - num1);
-    // console.log(sortNums(nums));
+    // let arrOFnums = [11,21,3];
+    // let sortNums = (array,direction) =>{
+    //     if (direction === '+'){
+    //         array.sort((num1,num2)=> num1 - num2)
+    //     }else if (direction === '-'){
+    //         array.sort((num1,num2)=> num2 - num1)
+    //     }
+    //  return array
+    // };
+    // console.log(sortNums(arrOFnums,'-'));
 
 
 
@@ -223,6 +227,79 @@
 
 
 
+
+    // additional
+
+
+
+
+
+    // - Напишите функцию cutString(str, n), которая делит строку на подстроки, состоящие из n символов.
+    // document.writeln(cutString('наслаждение',3)) // [нас,лаж,ден,ие]
+   // let emptyarr = []
+   // let subString = (str,n) =>{
+   //     for (let i = 0; i < str.length; i+=n) {
+   //         let sub = str.substring(i,i+n)
+   //         emptyarr.push(sub)
+   //
+   //     }
+   //     return emptyarr
+   // }
+   //  console.log(subString('наслаждение', 3));
+
+
+    // - Напишіть функцію delete_characters(str, length), яка повертає підрядок, що складається із зазначеної кількості символів.
+    //     let str = 'Каждый охотник желает знать';
+    // document.writeln(delete_characters(str, 7)); // Каждый
+
+
+    // let txt = 'Каждый охотник желает знать';
+    // let delete_characters = (str,length) =>{
+    // let x = str.slice(0,length)
+    //     return  x
+    // }
+    // console.log(delete_characters(txt, 7));
+
+    // - Напишіть функцію insert_dash(str), яка приймає рядок str як аргумент і вставляє тире (-) між словами. При цьому всі символи рядка необхідно перевести у верхній регістр.
+    //     let str = "HTML JavaScript PHP";
+    // document.writeln(insert_dash(str)); // 'HTML-JAVASCRIPT-PHP'
+
+    // let str = "HTML JavaScript PHP";
+    // let insert_dash = (str) =>{
+    //     let addTyre = str.replaceAll(' ','-')
+    //    let up =  addTyre.toUpperCase()
+    //     return up
+    //
+    // }
+    // console.log(insert_dash(str));
+
+    // - Напишіть функцію, яка приймає рядок як аргумент і перетворює регістр першого символу рядка з нижнього регістру у верхній.
+  // let str = 'hello okten';
+  //  let firstLtoUp = (str) =>{
+  //      let y = str.substring(1)
+  //      let up = str[0].toUpperCase()
+  //      let x = up.concat(y)
+  //      return x
+  //  }
+  //   console.log(firstLtoUp(str));
+
+    // - Дано список імен.
+    //     let n1 = 'Harry..Potter'
+    // let n2 = 'Ron---Whisley'
+    // let n3 = 'Hermione__Granger'
+    // Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+    // let n1 = 'Harry Potter'
+    // let n2 = 'Ron Whisley'
+    // let n3 = 'Hermione Granger'
+
+    // let n1 = 'Harry..Potter';
+    // let n2 = 'Ron---Whisley';
+    // let n3 = 'Hermione__Granger';
+    // let replace = (str) =>{
+    //     return str.replaceAll(/[._/*]/g,' ').replace(/\s+/g," ")
+    //
+    // }
+    // console.log(replace(n1));
 
 
 </script>
