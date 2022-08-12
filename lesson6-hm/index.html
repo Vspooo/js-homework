@@ -302,6 +302,214 @@
     // console.log(replace(n1));
 
 
+    // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+
+    // function generatorNums(min,max) {
+    //     min = Math.ceil(min)
+    //     max = Math.floor(max)
+    //    return Math.floor(Math.random() * (max - min) + min)
+    // }
+    //
+    // console.log(generatorNums(1, 100));
+
+
+
+    // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+
+    // let randomArr = [0,21,8,6,65,4,7];
+    // let sortNums = (arr) =>{
+    //     for (let i = 0; i < arr.length; i++) {
+    //       let sortedNum =  arr.sort((num1,num2) => num1-num2 )
+    //         return sortedNum
+    //     }
+    // }
+    // console.log(sortNums(randomArr));
+
+    // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати  його за допомоги filter, залишивши тільки парні числа (без 0!)
+
+
+    // let randomArr = [0,21,8,6,65,4,7];
+    // let sortNum = (array) =>{
+    //     for (let i = 0; i < array.length; i++) {
+    //         let sortedNum = array.filter(num => num%2 ===0 && num !== 0)
+    //         return sortedNum
+    //     }
+    // }
+    // console.log(sortNum(randomArr));
+
+
+    // coursesArray = [
+    //     {
+    //         title: 'JavaScript Complex',
+    //         monthDuration: 5,
+    //         hourDuration: 909,
+    //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    //     },
+    //     {
+    //         title: 'Java Complex',
+    //         monthDuration: 6,
+    //         hourDuration: 909,
+    //         modules: ['html',
+    //             'css',
+    //             'js',
+    //             'mysql',
+    //             'mongodb',
+    //             'angular',
+    //             'aws',
+    //             'docker',
+    //             'git',
+    //             'java core',
+    //             'java advanced']
+    //     },
+    //     {
+    //         title: 'Python Complex',
+    //         monthDuration: 6,
+    //         hourDuration: 909,
+    //         modules: ['html',
+    //             'css',
+    //             'js',
+    //             'mysql',
+    //             'mongodb',
+    //             'angular',
+    //             'aws',
+    //             'docker',
+    //             'python core',
+    //             'python advanced']
+    //     },
+    //     {
+    //         title: 'QA Complex',
+    //         monthDuration: 4,
+    //         hourDuration: 909,
+    //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    //     },
+    //     {
+    //         title: 'FullStack',
+    //         monthDuration: 7,
+    //         hourDuration: 909,
+    //         modules: ['html',
+    //             'css',
+    //             'js',
+    //             'mysql',
+    //             'mongodb',
+    //             'react',
+    //             'angular',
+    //             'aws',
+    //             'docker',
+    //             'git',
+    //             'node.js',
+    //             'python',
+    //             'java']
+    //     },
+    //     {
+    //         title: 'Frontend',
+    //         monthDuration: 4,
+    //         hourDuration: 909,
+    //         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    //     }
+    // ];
+   //
+   //  // відсортувати його в спадаючому порядку за кількістю елементів в полі modules
+   // let sortByModules = coursesArray.sort((modulF,modulS) => modulS.modules.length - modulF.modules.length)
+   //  console.log(sortByModules);
+
+
+    // - Напишіть функцію count(str, stringsearch), яка повертає кількість символів stringsearch у рядку str.
+    //     let symb = "о", str = "Астрономия это наука о небесных объектах";
+    // document.writeln(count(str, symb)) // 5
+
+    // let symb = "о", str = "Астрономия это наука о небесных объектах";
+    // let countOfElement = (element,str) =>{
+    //     let count = 0;
+    //     for (const item of str) {
+    //         if (item === element){
+    //             count++;
+    //         }
+    //     }
+    //     return count;
+    //
+    // }
+    // console.log(countOfElement(symb,str));
+
+
+
+    // -стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+
+    let booksArray = [
+        {
+            title: 'JavaScript Complex',
+            pages: 225,
+            owners: ['Petya','Vasya','Oleg','Yura'],
+            genre : ['learn','simple study']
+        },
+        {
+            title: 'Java Complex',
+            pages: 185,
+            owners: ['Petya','Vasya','Oleg'],
+            genre: ['learn','study','normal study','dfsce']
+        },
+        {
+            title: 'Python Complex',
+            pages: 178,
+            owners: ['Oleg','Yura'],
+            genre: ['learn','study']
+        },
+        {
+            title: 'QA Complex',
+            pages: 164,
+            owners: ['Petya','Vasya','Oleg','Yura','Viktor'],
+            genre: ['learn','study','normal study']
+        },
+        {
+            title: 'FullStack',
+            pages: 214,
+            owners: ['Petya'],
+            genre: ['fdddfg','dfsfds','dfggdf','fgdgdd','dvdgd','dsdfrf']
+        },
+        {
+            title: 'Frontend',
+            pages: 196,
+            owners: ['Petya','Vasya','Oleg','Yura','Viktor','Oleksandr'],
+            genre: ['fgddvdf']
+        }
+    ];
+
+    // -знайти наібльшу книжку
+
+    // let filterBySizePages = booksArray.sort((book1,book2) =>{
+    //    book1.pages - book2.pages
+    // })
+    // console.log(filterBySizePages[0]);
+
+
+    // - знайти книжку/ки з найбільшою кількістю жанрів
+
+    // let sortBySizeGenre = booksArray.sort((bookF,bookS)=> bookS.genre.length - bookF.genre.length )
+    // console.log(sortBySizeGenre[0]);
+
+
+    // - знайти книжку/ки з найдовшою назвою
+
+    // let sortByLengthTitle = booksArray.sort((bookF,bookS) => bookS.title.length - bookF.title.length);
+    // console.log(sortByLengthTitle[0]);
+
+
+    // - знайти книжку/ки які писали 2 автори
+
+    // let bookHaveTwoOwner = booksArray.filter(owner => owner.owners.length === 2);
+    // console.log(bookHaveTwoOwner);
+
+
+    // знайти книжку/ки які писав 1 автор
+
+    // let bookHaveOneOwner = booksArray.filter(owner => owner.owners.length === 1);
+    // console.log(bookHaveOneOwner);
+
+
+    // - вісортувати книжки по кількості сторінок по зростанню
+
+    // let sortByPagesLowToHigh = booksArray.sort((bookF,bookS)=> bookF.pages - bookS.pages)
+    // console.log(sortByPagesLowToHigh);
+
 </script>
 </body>
 </html>
