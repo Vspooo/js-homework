@@ -85,47 +85,128 @@
   // -- changeYear (newValue) - змінює рік випуску на значення newValue
   // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
 
-  let vodila = {
-    name : 'Vasya',
-    age:20
-  }
+  // let vodila = {
+  //   name : 'Vasya',
+  //   age:20
+  // }
+  //
+  // let vodila2 = {
+  //     name : 'Petya',
+  //     age:22
+  // }
 
-  let vodila2 = {
-      name : 'Petya',
-      age:22
-  }
+  //  function Car(model,producer,year,maxSpeed,engineVolume){
+  //   this.model = model;
+  //   this.producer = producer;
+  //   this.year = year;
+  //   this.maxSpeed = maxSpeed;
+  //   this.engineVolume = engineVolume;
+  //   this.drive = function (){console.log(`Ідемо зі швидкість ${this.maxSpeed} на годину`)};
+  //   this.info = () =>{console.log(`
+  //   model - ${this.model}
+  //   producer - ${this.producer}
+  //   year - ${this.year}
+  //   maxspeed - ${this.maxSpeed}
+  //   enginevolume - ${this.engineVolume}
+  //   `)
+  //   }
+  //   this.increaseMaxSpeed = function(newSpeed) {this.maxSpeed = newSpeed}
+  // //   this.changeYear = function (newValue) {this.year = newValue}
+  //   this.addDriver = function (driver) {this.driver = driver}
+  //  }
+  //
+  //  let car1 = new Car('Bmw m3 e60','BMW',2014,280,3.1)
+  // console.log(car1);
+  // car1.drive()
+  // car1.info()
+  // car1.increaseMaxSpeed(300)
+  // car1.info()
+  // car1.changeYear(2020)
+  // car1.info()
+  //
+  // car1.addDriver(vodila)
 
-   function Car(model,producer,year,maxSpeed,engineVolume){
-    this.model = model;
-    this.producer = producer;
-    this.year = year;
-    this.maxSpeed = maxSpeed;
-    this.engineVolume = engineVolume;
-    this.drive = function (){console.log(`Ідемо зі швидкість ${this.maxSpeed} на годину`)};
-    this.info = () =>{console.log(`
-    model - ${this.model}
-    producer - ${this.producer}
-    year - ${this.year}
-    maxspeed - ${this.maxSpeed}
-    enginevolume - ${this.engineVolume}
-    `)
-    }
-    this.increaseMaxSpeed = function(newSpeed) {this.maxSpeed = newSpeed}
-    this.changeYear = function (newValue) {this.year = newValue}
-    this.addDriver = function (driver) {this.driver = driver}
-   }
 
-   let car1 = new Car('Bmw m3 e60','BMW',2014,280,3.1)
-  console.log(car1);
-  car1.drive()
-  car1.info()
-  car1.increaseMaxSpeed(300)
-  car1.info()
-  car1.changeYear(2020)
-  car1.info()
 
-  car1.addDriver(vodila)
-5
+  // class Car {
+  //     constructor(model,producer,year,maxSpeed,engineVolume) {
+  //         this.model = model;
+  //         this.producer = producer;
+  //         this.year = year;
+  //         this.maxSpeed = maxSpeed;
+  //         this.engineVolume = engineVolume;
+  //     }
+  //     drive(){console.log(`Їдемо зі швидкістю ${this.maxSpeed} на годину`)}
+  //     info(){console.log(`
+  //     model - ${this.model}
+  //     producer - ${this.producer}
+  //     year - ${this.year}
+  //     maxspeed - ${this.maxSpeed}
+  //     enginevolume - ${this.engineVolume}
+  //     `)
+  //     }
+  //     increaseMaxSpeed(newSpeed){this.maxSpeed = newSpeed}
+  //     changeYear(newValue){this.year = newValue}
+  //     addDriver(driver){this.driver = driver}
+  // }
+  // let car1 = new Car('Bmw','BMW',2014,260,3.5)
+  // car1.drive()
+  // car1.info()
+  //
+  // car1.increaseMaxSpeed(300)
+  // car1.info()
+  //
+  // car1.changeYear(2020)
+  // car1.info()
+  //
+  // car1.addDriver(vodila)
+  // console.log(car1);
+
+
+  //     -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+  // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+  //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+  //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+
+
+  // function Popelushka(name,age,size){
+  //     this.name = name;
+  //     this.age = age;
+  //     this.size = size;
+  // }
+  // let arr = [
+  //     new Popelushka('Vika',21,38),
+  //     new Popelushka('Tanya',20,40),
+  //     new Popelushka('Ira',21,37),
+  //     new Popelushka('Katya',19,38),
+  //     new Popelushka('Zosia',22,40),
+  //     new Popelushka('Nastya',23,41),
+  //     new Popelushka('Oksana',21,39),
+  //     new Popelushka('Olya',24,40),
+  //     new Popelushka('Anya',22,42),
+  //     new Popelushka('Masha',21,36)
+  // ]
+  //
+  // class Princ{
+  //     constructor(name,age,fintedSize) {
+  //         this.name = name;
+  //         this.age = age;
+  //         this.fintedSize = fintedSize;
+  //     }
+  // }
+  //
+  // let princ = new Princ('Petya',26,39)
+
+  // for (const arrElement of arr) {
+  //     if (princ.fintedSize === arrElement.size){
+  //         console.log(arrElement)
+  //     }
+  //
+  // }
+
+
+ // let findtedGirl = arr.find(element => element.size === princ.fintedSize)
+ //  console.log(findtedGirl);
 
 
 
