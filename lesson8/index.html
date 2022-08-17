@@ -208,12 +208,59 @@
  // let findtedGirl = arr.find(element => element.size === princ.fintedSize)
  //  console.log(findtedGirl);
 
+//additional
 
 
+  // function User(name,age,oblast,city){
+  //     this.name = name;
+  //     this.age = age;
+  //     this.oblast = oblast
+  //     this.city = city
+  //     oblast = {
+  //         city:city
+  //     }
+  //
+  // }
 
 
+  function User(id,name,username,email,addres,street,suite,city,zipcode,geo,lat,lng,phone,website,company,nameCompany,catchPhrase,bs){
+this.id = id
+this.name = name
+this.username = username
+this.email = email
+this.addres = addres
+this.street = street
+this.suite = suite
+this.city = city
+this.zipcode = zipcode
+this.goe = geo
+this.lat = lat
+this.lng = lng
+      addres = {
+      street : street,
+       suite :suite,
+       city : city,
+        zipcode:zipcode,
+        geo : {
+          lat : lat,
+            lng : lng
+        }
+      }
+this.phone = phone
+this.website = website
+this.company = company
+this.nameCompany = nameCompany
+this.cathPhares = catchPhrase
+this.bs = bs
+      company = {
+      nameCompany : nameCompany,
+      catchPhrase : catchPhrase,
+      bs : bs
+      }
+  }
 
-
+  let user1 = new User(1,'Leanne Graham','Bret','Sincere@april.biz','addres','Kulas Light','Apt. 556','Gwenborough','92998-3874','geo','-37.3159','81.1496','1-770-736-8031 x56442','hildegard.org','company','Romaguera-Crona','Multi-layered client-server neural-net','harness real-time e-markets')
+  console.log(user1);
 
 </script>
 
