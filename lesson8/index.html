@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+  // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+  // створити пустий масив, наповнити його 10 об'єктами new User(....)
+
+  // let arr = []
+  //   function User(id,name,surname,email,phone){
+  //     this.id = id;
+  //     this.name = name;
+  //     this.surname = surname;
+  //     this.email = email;
+  //     this.phone = phone;
+  //   }
+  //  let user1 =  new User(1,'Petya','Pupkin','fgdgdf@gmail.com','06653325978');
+  // let user2 = new User(2,'Viktoria','Koloskin','gdfdg@gmail.com','06657778963');
+  // let user3 = new User(3,'Vitia','fdgdfgdgdfdf','fgfdgdgd@gmail.com','0556332878');
+  // let user4 = new User(4,'Serhij','Jurawlew','jurawlew@gmail.com','055632478');
+  // let user5 = new User(5,'Oleksandr','Petrov','oleksanrPetrow@gmail.com','6445332879');
+  // let user6 = new User(6,'Sviatoslav','Neznaju','Svatik@gmail.com','522364780');
+  // let user7 = new User(7,'Volodya','Voloshin','voloshunns1@gmail.com','066332487');
+  // let user8 = new User(8,'Vasya','dsfsdf','vasiaDSF@gmail.com','0554112368');
+  // let user9 = new User(9,'Kokos','koks','kokosik3@gmail.com','0445887213');
+  // let user10 = new User(10,'Anya','dfdkss','anyaKsS@gmail.com','077896452');
+  // arr.push(user1,user2,user3,user4,user5,user6,user7,user8,user9,user10);
+  // console.log(arr);
+
+
+  // - Взяти масив з  User[] з попереднього завдання, та відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+
+ // let filteredArr = arr.filter(user => user.id%2 ===0);
+ //  console.log(filteredArr);
+
+  // - Взяти масив з  User[] з попереднього завдання, та відсортувати його по id. по зростанню (sort)
+
+  // let sortedArr = arr.sort((userF,userS) => userF.id - userS.id)
+  // console.log(sortedArr);
+
+
+  // - створити класс для об'єктів Client з полями id, name, surname , email, phone, order (поле є масивом зі списком товарів)
+  // створити пустий масив, наповнити його 10 об'єктами Client
+//  let arr = []
+//   class Client{
+//     constructor(id,name,surname,email,phone,order) {
+//       this.id = id;
+//       this.name = name;
+//       this.surname = surname
+//       this.email = email;
+//       this.phone = phone;
+//       this.order = order;
+//     }
+//   }
+//
+//   let client1 =  new Client(1,'Petya','Pupkin','fgdgdf@gmail.com','06653325978','order,gdfgdfg,fdgdfvdf,losdfsd');
+//   let client2 = new Client(2,'Viktoria','Koloskin','gdfdg@gmail.com','06657778963','order2,sfgdgdfg,dfgdgf');
+//   let client3 = new Client(3,'Vitia','fdgdfgdgdfdf','fgfdgdgd@gmail.com','0556332878','order3,dgdfgd,dfgodsv,erfer');
+//   let client4 = new Client(4,'Serhij','Jurawlew','jurawlew@gmail.com','055632478','order4,fdgdgdf');
+//   let client5 = new Client(5,'Oleksandr','Petrov','oleksanrPetrow@gmail.com','6445332879','order5');
+//   let client6 = new Client(6,'Sviatoslav','Neznaju','Svatik@gmail.com','522364780','order6,dfgdgdf,fdgdgdf,dfgfdgddfv,scscs,rrgeg');
+//   let client7 = new Client(7,'Volodya','Voloshin','voloshunns1@gmail.com','066332487','order7,gfdfgd,chgf');
+//   let client8 = new Client(8,'Vasya','dsfsdf','vasiaDSF@gmail.com','0554112368','order8,sdfsdfdrt');
+//   let client9 = new Client(9,'Kokos','koks','kokosUserik3@gmail.com','0445887213','order9,ghjfghfgh,hgjuyyju,dbff,sfdfg,dfg,ghffh,gfhfghfgfgh');
+//   let client10 = new Client(10,'Anya','dfdkss','anyaKsS@gmail.com','077896452','order10,fdgdfg,dfgdf,tgrt,ufgb,ufhh');
+//
+//    arr.push(client1,client2,client3,client4,client5,client6,client7,client8,client9,client10);
+//   // - Взяти масив (Client [] з попереднього завдання).Відсортувати його по кількості товарів в полі order по зростанню. (sort)
+//
+// let sortedArr =  arr.sort((clientF,clientS) =>  clientF.order.length - clientS.order.length );
+//   console.log(sortedArr);
+
+
+  // - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску,
+  // максимальна швидкість, об'єм двигуна.додати в об'єкт функції:
+  // -- drive () - яка виводить в консоль `їдемо зі швидкістю ${максимальна швидкість} на годину`
+  // -- info () - яка виводить всю інформацію про автомобіль в форматі `назва поля - значення поля`
+  // -- increaseMaxSpeed (newSpeed) - яка підвищує значення максимальної швидкості на значення newSpeed
+  // -- changeYear (newValue) - змінює рік випуску на значення newValue
+  // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і додає його в поточний об'єкт car
+
+  let vodila = {
+    name : 'Vasya',
+    age:20
+  }
+
+  let vodila2 = {
+      name : 'Petya',
+      age:22
+  }
+
+   function Car(model,producer,year,maxSpeed,engineVolume){
+    this.model = model;
+    this.producer = producer;
+    this.year = year;
+    this.maxSpeed = maxSpeed;
+    this.engineVolume = engineVolume;
+    this.drive = function (){console.log(`Ідемо зі швидкість ${this.maxSpeed} на годину`)};
+    this.info = () =>{console.log(`
+    model - ${this.model}
+    producer - ${this.producer}
+    year - ${this.year}
+    maxspeed - ${this.maxSpeed}
+    enginevolume - ${this.engineVolume}
+    `)
+    }
+    this.increaseMaxSpeed = function(newSpeed) {this.maxSpeed = newSpeed}
+    this.changeYear = function (newValue) {this.year = newValue}
+    this.addDriver = function (driver) {this.driver = driver}
+   }
+
+   let car1 = new Car('Bmw m3 e60','BMW',2014,280,3.1)
+  console.log(car1);
+  car1.drive()
+  car1.info()
+  car1.increaseMaxSpeed(300)
+  car1.info()
+  car1.changeYear(2020)
+  car1.info()
+
+  car1.addDriver(vodila)
+
+
+
+
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
