@@ -222,45 +222,202 @@
   //
   // }
 
+//   let arr = []
+//
+//   function User(id,name,username,email,addres,street,suite,city,zipcode,geo,lat,lng,phone,website,company,nameCompany,catchPhrase,bs){
+// this.id = id
+// this.name = name
+// this.username = username
+// this.email = email
+// this.addres = addres
+// this.street = street
+// this.suite = suite
+// this.city = city
+// this.zipcode = zipcode
+// this.goe = geo
+// this.lat = lat
+// this.lng = lng
+//       addres = {
+//       street : street,
+//        suite :suite,
+//        city : city,
+//         zipcode:zipcode,
+//         geo : {
+//           lat : lat,
+//             lng : lng
+//         }
+//       }
+// this.phone = phone
+// this.website = website
+// this.company = company
+// this.nameCompany = nameCompany
+// this.cathPhares = catchPhrase
+// this.bs = bs
+//       company = {
+//       nameCompany : nameCompany,
+//       catchPhrase : catchPhrase,
+//       bs : bs
+//       }
+//   }
+//
+//   let user1 = new User(1,'Leanne Graham','Bret','Sincere@april.biz','addres','Kulas Light','Apt. 556','Gwenborough','92998-3874','geo','-37.3159','81.1496','1-770-736-8031 x56442','hildegard.org','company','Romaguera-Crona','Multi-layered client-server neural-net','harness real-time e-markets')
+//   console.log(user1);
+//   arr.push(user1)
+//   console.log(arr);
 
-  function User(id,name,username,email,addres,street,suite,city,zipcode,geo,lat,lng,phone,website,company,nameCompany,catchPhrase,bs){
-this.id = id
-this.name = name
-this.username = username
-this.email = email
-this.addres = addres
-this.street = street
-this.suite = suite
-this.city = city
-this.zipcode = zipcode
-this.goe = geo
-this.lat = lat
-this.lng = lng
-      addres = {
-      street : street,
-       suite :suite,
-       city : city,
-        zipcode:zipcode,
-        geo : {
-          lat : lat,
-            lng : lng
-        }
+
+
+
+
+  // function UserCard(key, balance = 100, transactionLimit = 100, historyLogs = []) {
+  //     let addHistoryLogs = (operationType, credits) => {
+  //         let time = new Date().toLocaleTimeString();
+  //         let day = new Date().toLocaleDateString("en-US");
+  //         historyLogs.push({
+  //             operationType,
+  //             credits,
+  //             operationTime: `${time} ${day}`,
+  //         })
+  //     }
+  //     return {
+  //         getCardOptions: () => {
+  //             return {
+  //
+  //                 ['key']: key,
+  //                 ['balance']: balance,
+  //                 ['transactionLimit']: transactionLimit,
+  //                 ['historyLogs']: historyLogs,
+  //             }
+  //         },
+  //         putCredits(cash) {
+  //             balance += cash;
+  //             addHistoryLogs('Received credits', cash);
+  //         },
+  //         takeCredits: (cash) => {
+  //             if (cash <= balance && cash <= transactionLimit) {
+  //                 balance -= cash;
+  //                 addHistoryLogs('Withdrawal of credits', cash);
+  //             } else console.error('Перевищейний ліміт, або недостатньо коштів, Будьласка поповніть ваш рахунок :)');
+  //         },
+  //         setTransactionLimit: (newLimit) => {
+  //             transactionLimit = newLimit;
+  //             addHistoryLogs('Transaction limit change', newLimit);
+  //         },
+  //         transferCredits: (cash, anotherCard) => {
+  //             if (cash * 1.05 <= balance && cash * 1.05 <= transactionLimit) {
+  //                 balance -= cash * 1.05;
+  //                 anotherCard.putCredits(cash);
+  //                 addHistoryLogs('Withdrawal of credits', cash);
+  //             } else console.error('Перевищейний ліміт, або недостатньо коштів, Будьласка поповніть ваш рахунок :)');
+  //         },
+  //     }
+  // }
+  // class UserAccount {
+  //     constructor(name) {
+  //         this.name = name;
+  //         this.cards = [];
+  //     }
+  //
+  //     addCard() {
+  //         let cardsLength = this.cards.length;
+  //         if (cardsLength === 3) return console.error('Максимальна кількість карток');
+  //         this.cards.push(UserCard(cardsLength + 1))
+  //     }
+  //
+  //     getCardByKey(cardKey) {
+  //         if (cardKey > 2 || cardKey < 0) return console.error(`Ви ввели неправильний номер картки!`);
+  //         return this.cards.find(card => card.getCardOptions().key === cardKey)
+  //     }
+  //
+  // }
+  //
+  // let user = new UserAccount('Bob');
+  // user.addCard()
+  // user.addCard()
+  // let card1 = user.getCardByKey(1);
+  // let card2 = user.getCardByKey(2);
+  // card1.putCredits(500);
+  // card1.setTransactionLimit(800);
+  // card1.transferCredits(300, card2);
+  // card2.takeCredits(50);
+  // console.log(card1.getCardOptions());
+  // console.log(card2.getCardOptions());
+
+
+  function UserCard(key,balance = 100,transactionLimit = 100,historyLogs = []){
+      let addHistryLogs = (operationtype,cash) => {
+          let time = new Date().toLocaleTimeString();
+          let date = new Date().toLocaleDateString("en-US");
+          historyLogs.push({
+              operationtype,
+              cash,
+              operaTionTime: `${time} ${date}`,
+          })
       }
-this.phone = phone
-this.website = website
-this.company = company
-this.nameCompany = nameCompany
-this.cathPhares = catchPhrase
-this.bs = bs
-      company = {
-      nameCompany : nameCompany,
-      catchPhrase : catchPhrase,
-      bs : bs
+      return{
+          getCardOptions:() =>{
+              return{
+                  ['balance'] : balance,
+                  ['transactionLimit'] : transactionLimit,
+                  ['key'] : key ,
+                  ['historyLogs'] : historyLogs
+              }
+
+          },
+          putCash(cash){
+              balance+=cash
+              addHistryLogs('Popovnenja',cash)
+          },
+          takeCredits:(cash) =>{
+              if (cash <= balance && cash <= transactionLimit){
+                  balance -= cash
+              }else console.error('Не достатня кількість грошей на рахунку або сума перевищує ліміт')
+          },
+          setTransactionLimit:(newLimit) => {
+              transactionLimit = newLimit
+              addHistryLogs('Змінення ліміту на карті',newLimit)
+          },
+          transferCredit:(cash,anyCard) =>{
+              if (cash* 1.05 <= balance && cash* 1.05 <= transactionLimit){
+                  balance -= cash* 1.05
+                  anyCard.putCash(cash)
+                  addHistryLogs('Поповнення рахунку',cash)
+              }else console.error('Не достатня кількість грошей або сума перевищує ліміт,попвніть рахунок для виконання операції')
+          },
+
       }
   }
 
-  let user1 = new User(1,'Leanne Graham','Bret','Sincere@april.biz','addres','Kulas Light','Apt. 556','Gwenborough','92998-3874','geo','-37.3159','81.1496','1-770-736-8031 x56442','hildegard.org','company','Romaguera-Crona','Multi-layered client-server neural-net','harness real-time e-markets')
-  console.log(user1);
+
+  class UserAccount{
+      constructor(name) {
+          this.name = name
+          this.card = []
+      }
+      addCrad(){
+          let cardLength = this.card.length
+          if (cardLength === 3) return console.error('Максимальна кількість карток')
+          this.card.push(UserCard(cardLength+1))
+      }
+
+      getCardByKey(cardKey){
+          if (cardKey > 2 || cardKey <0 ) return console.error(`Ви ввели не правельний ключ карти`)
+          return this.card.find(card => card.getCardOptions().key === cardKey)
+      }
+  }
+
+ let user1 = new UserAccount('Petya')
+  user1.addCrad()
+  user1.addCrad()
+  let card1 = user1.getCardByKey(1)
+  let card2 = user1.getCardByKey(2)
+  card1.putCash(500)
+  card1.setTransactionLimit(1000)
+  card1.transferCredit(100,card2)
+  card2.takeCredits(100)
+  console.log(card1.getCardOptins);
+  console.log(card2.getCardOptions);
+
 
 </script>
 
